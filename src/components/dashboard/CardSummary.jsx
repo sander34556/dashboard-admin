@@ -18,7 +18,7 @@ const CardSummary = ({
     return (
         <div className="relative bg-white rounded-lg shadow-sm p-4 flex justify-between items-center overflow-hidden">
             {/* left */}
-            <div className="z-10">
+            <div className="">
                 <div className="flex items-center space-x-2 text-sm text-gray-500">
                     <span className={`h-2 w-2 rounded-full ${dotColor}`}></span>
                     <span>{title}</span>
