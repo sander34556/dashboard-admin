@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+Thai&display=swap");
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  @apply bg-neutral-100 box-border;
+  font-family: "Noto Sans", "Noto Sans Thai", sans-serif;
+}
