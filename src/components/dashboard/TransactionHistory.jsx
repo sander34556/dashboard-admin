@@ -1,6 +1,7 @@
 import TransactionHistoryFooter from "./TransactionHistoryFooter"
 import TransactionHistoryHeader from "./TransactionHistoryHeader"
-
+import TransactionHistoryList from "./TransactionHistoryList"
+import { transactionList } from '../../utils/transactionlist'
 
 
 const TransactionHistory = () => {
@@ -9,15 +10,17 @@ const TransactionHistory = () => {
 
             <TransactionHistoryHeader />
 
-            <ul className="flex-1">
-                <li className="">1</li>
-                <li className="">2</li>
-                <li className="">3</li>
-                <li className="">4</li>
-                <li className="">5</li>
-                <li className="">6</li>
+            <ul className="flex-1 overflow-y-auto">
+                {
+                    transactionList.map((item, index) =>
+                        <TransactionHistoryList
+                            key={index}
+                            item={item}
+                        />)
+                }
+
             </ul>
-            
+
             <TransactionHistoryFooter />
         </div>
     )
